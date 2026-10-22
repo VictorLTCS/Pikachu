@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #f5cf06;
+    font-family: 'Righteous', sans-serif;
+    color: #8e4106;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* título branco grande */
+h1 {
+    font-size: 22vw;
+    text-align: center;
+    color: white;
+    transform: translateY(20%);
+}
+
+/* texto "Pikachu" transparente ao fundo */
+h1::before {
+    content: 'Pikachu';
+    color: #fff5;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    font-size: 27vw;
+}
+
+.pikachu {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+}
+
+.texto-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h2 {
+    font-size: 10.5vw;
+    text-align: center;
+}
+
+p {
+    display: none;
+}
+
+a {
+    width: 100%;
+    height: 100px;
+    text-decoration: none;
+    background-color: #8e4106;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer {
+    display: none;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    p {
+        display: block;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
+/* computador */
+@media (min-width: 1024px) {
+    body {
+        padding: 32px 70px;
+    }
+
+    h1 {
+        font-size: 20vw;
+        transform: none;
+    }
+
+    .pikachu {
+        width: auto;
+        height: 60vh;
+        top: 60%;
+        left: 49%;
+    }
+
+    .texto-botao {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .texto-botao div {
+        width: 500px;
+    }
+
+    h2 {
+        font-size: 60px;
+        text-align: left;
+        font-weight: 200;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: left;
+        font-weight: 100;
+    }
+
+    a {
+        width: 400px;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+    }
+}
